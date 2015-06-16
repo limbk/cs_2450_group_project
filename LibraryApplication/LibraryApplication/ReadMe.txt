@@ -1,35 +1,40 @@
 ========================================================================
-    APPLICATION : LibraryApp Project Overview
+    CONSOLE APPLICATION : LibraryApplication Project Overview
 ========================================================================
 
-AppWizard has created this LibraryApp Application for you.  
+AppWizard has created this LibraryApplication application for you.
 
 This file contains a summary of what you will find in each of the files that
-make up your LibraryApp application.
+make up your LibraryApplication application.
 
-LibraryApp.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard. 
-    It contains information about the version of Visual C++ that generated the file, and 
+
+LibraryApplication.vcxproj
+    This is the main project file for VC++ projects generated using an Application Wizard.
+    It contains information about the version of Visual C++ that generated the file, and
     information about the platforms, configurations, and project features selected with the
     Application Wizard.
 
-LibraryApp.vcxproj.filters
+LibraryApplication.vcxproj.filters
     This is the filters file for VC++ projects generated using an Application Wizard. 
     It contains information about the association between the files in your project 
     and the filters. This association is used in the IDE to show grouping of files with
     similar extensions under a specific node (for e.g. ".cpp" files are associated with the
     "Source Files" filter).
 
-LibraryApp.cpp
+LibraryApplication.cpp
     This is the main application source file.
 
-AssemblyInfo.cpp
-	Contains custom attributes for modifying assembly metadata.
+/////////////////////////////////////////////////////////////////////////////
+Other standard files:
+
+StdAfx.h, StdAfx.cpp
+    These files are used to build a precompiled header (PCH) file
+    named LibraryApplication.pch and a precompiled types file named StdAfx.obj.
 
 /////////////////////////////////////////////////////////////////////////////
 Other notes:
 
-AppWizard uses "TODO:" to indicate parts of the source code you
+AppWizard uses "TODO:" comments to indicate parts of the source code you
 should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////

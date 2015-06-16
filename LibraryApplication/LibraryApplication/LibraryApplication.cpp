@@ -1,9 +1,10 @@
-// LibraryApp.cpp : main project file.
+// LibraryApplication.cpp : Defines the entry point for the console application.
+//
 
 #include "stdafx.h"
 
 
-int main(int argc, char* argv[])
+int _tmain(int argc, _TCHAR* argv[])
 {
 	//Load Library Object
 
@@ -14,7 +15,7 @@ int main(int argc, char* argv[])
 	//Print Menu items
 	bool done = false;
 	int choice;
-	while (done == false) {
+	while (!done) {
 		std::cout << "Please select an action number from the following menu: \n";
 		std::cout << "1) Check out a book. \n";
 		std::cout << "2) Check in a book. \n";
@@ -67,5 +68,6 @@ int main(int argc, char* argv[])
 
 	}
 
-    return 0;
+	return 0;
 }
+
