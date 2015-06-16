@@ -10,6 +10,7 @@ int main(array<System::String ^> ^args)
 {
 	//Load Library Object
 
+
 	//Print Welcome to the screen
 	cout << "Welcome to the Library\n\n";
 
@@ -55,6 +56,7 @@ int main(array<System::String ^> ^args)
 			break;
 		default:
 			cout << "ERROR: Invalid input";
+			cin.ignore(INT_MAX);
 			break;
 		}
 
