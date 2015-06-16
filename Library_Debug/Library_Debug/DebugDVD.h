@@ -10,5 +10,7 @@ public:
 	DebugDVD(std::istream& in);
 	~DebugDVD();
 	ITEMTYPES getType(){ return DVD; }
+	void printStatusTo(std::ostream& out);
+	void printAsAvailableTo(std::ostream& out);
 };
 

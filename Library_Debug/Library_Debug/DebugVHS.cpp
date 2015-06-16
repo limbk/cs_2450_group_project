@@ -16,3 +16,15 @@ DebugVHS::DebugVHS(std::istream& in)
 DebugVHS::~DebugVHS()
 {
 }
+
+void DebugVHS::printStatusTo(std::ostream& out)
+{
+	out << "VHS ";
+	DebugItem::printStatusTo(out);
+}
+
+void DebugVHS::printAsAvailableTo(std::ostream& out)
+{
+	out << "VHS ";
+	DebugItem::printAsAvailableTo(out);
+}

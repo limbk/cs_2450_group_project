@@ -59,6 +59,11 @@ void DebugPatron::outputTo(std::ostream& out)
 	}
 }
 
+void DebugPatron::printTo(std::ostream& out)
+{
+	out << name;
+}
+
 void DebugPatron::outputCheckedOutTo(std::ostream& out, Version which)
 {
 	switch (which)
@@ -115,6 +120,7 @@ void DebugPatron::outputOverdueTo(std::ostream& out, Version which)
 		break;
 	}
 }
+
 void DebugPatron::checkOut(DebugItem* toCheckout)
 {
 	if (checkedOut.size() < MaxCheckedOut)
@@ -128,4 +134,11 @@ DebugItem* DebugPatron::checkIn(std::string identifier)
 	DebugItem* toReturn = (*iter);
 	checkedOut.erase(iter);
 	return (toReturn);
+}
+
+std::vector<DebugItem*> DebugPatron::extractBooks()
+{
+	std::vector<DebugItem*> toReturn = checkedOut;
+	checkedOut.clear();
+	return toReturn;
 }

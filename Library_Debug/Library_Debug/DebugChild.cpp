@@ -16,3 +16,9 @@ DebugChild::DebugChild(std::istream& in)
 DebugChild::~DebugChild()
 {
 }
+
+void DebugChild::printTo(std::ostream& out)
+{
+	out << "Child ";
+	DebugPatron::printTo(out);
+}

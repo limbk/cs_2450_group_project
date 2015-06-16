@@ -14,6 +14,7 @@ private:
 	std::string title{};
 	bool _isOverdue = false;
 	int dueInNumDays{};
+
 public:
 
 	enum ITEMTYPES{ADULTBOOK, CHILDRENSBOOK, VHS, DVD};
@@ -30,14 +31,14 @@ public:
 	 *~~~~~~~~~~~~~~~~~~~~~~~~CLASS METHODS~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 	virtual std::ostream& outputTo(std::ostream& out);
-	void printStatusTo(std::ostream& out);
-	void printTitleTo(std::ostream& out);
 	void checkOut(DebugDate& outDay);
 	void checkIn(DebugDate& inDay);
 	bool isOverdue() const { return _isOverdue; }
 	bool hasTitle(const std::string& toCheck){ return (toCheck == title); }
-	virtual ITEMTYPES getType() { return ADULTBOOK; };
+	virtual ITEMTYPES getType() = 0;
 	void update(Subject* toExamine);
+	virtual void printStatusTo(std::ostream& out);
+	virtual void printAsAvailableTo(std::ostream& out);
 
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~CLASS OPERATIONS~~~~~~~~~~~~~~~~~~~~~~~~

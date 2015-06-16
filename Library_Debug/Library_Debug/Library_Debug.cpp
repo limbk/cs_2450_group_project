@@ -2,12 +2,13 @@
 //
 
 #include "stdafx.h"
-//#include "DebugPatron.h"
-//#include "DebugLibrary.h"
 #include "Subject.h"
 
 #include "DebugItem.h"
 #include "DebugDate.h"
+#include "DebugPatron.h"
+#include "DebugLibrary.h"
+
 
 //void testDebugDate()
 //{
@@ -42,7 +43,6 @@
 //	std::cout <<  "DebugDate testing is done.\n";
 //	getchar();
 //}
-
 //void TestDebugItem()
 //{
 //	DebugItem sam("Sam is my title");
@@ -229,52 +229,50 @@ int _tmain(int argc, _TCHAR* argv[])
 	//TestDebugItem();
 	//TestDebugMediaAndBook();
 	//testPatron();
-	//std::cout <<  "Creating library full of titles.\n";
-	//std::ifstream libTitles("BookTitles.txt");
-	//DebugLibrary frank(DebugDate(), libTitles);
-	//libTitles.close();
-	//std::cout <<  "Posting what is available to an adult.\n";
-	//frank.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
-	//std::cout <<  "That's a lot!!\n";
-	//std::cout <<  "Adding a new patron to the library!\n";
-	//frank.addPatron("Greg", DebugPatron::PatronType::ADULT);
-	//frank.outputKnownPatronsTo(std::cout);
-	//std::cout <<  "Making new empty library.\n";
-	//std::ifstream smallerLibraryInput("TestBatchSave.txt");
-	//DebugLibrary sally(DebugDate(), smallerLibraryInput);
-	//smallerLibraryInput.close();
-	//sally.addPatron("Smith", DebugPatron::PatronType::ADULT);
-	//sally.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
-	//std::cout <<  "Adding a couple books...\n";
-	//sally.addItem("This is my life now.", DebugItem::ITEMTYPES::ADULTBOOK);
-	//sally.addItem("This is my story", DebugItem::ITEMTYPES::CHILDRENSBOOK);
-	//sally.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
-	//std::cout <<  "Removing one of the books...\n";
-	//sally.removeItem("This is my story");
-	//sally.outputAvailableTo(std::cout, "Smith");
-	//std::cout <<  "Checking out title now.\n";
-	//sally.checkoutTitle("This is my life now.", "Smith");
-	//sally.outputCheckedOutTo(std::cout);
-	//sally.outputAvailableTo(std::cout, "Smith");
-	//std::cout <<  "\nReturning the title now.\n";
-	//sally.checkinTitle("This is my life now.", "Smith");
-	//sally.outputTo(std::cout);
-	//std::cout <<  "Saving to file now...\n";
-	//std::ofstream output("TestLibrarySave.txt");
-	//sally.outputTo(output);
-	//output.close();
-	//std::cout <<  "Loading the saved file.\n";
-	//std::ifstream testLoadFile("TestLibrarySave.txt");
-	//DebugLibrary slappy(testLoadFile);
-	//slappy.outputTo(std::cout);
-	//std::cout <<  "Test complete!\n";
+	std::cout <<  "Creating library full of titles.\n";
+	std::ifstream libTitles("BookTitles.txt");
+	DebugLibrary frank(DebugDate(), libTitles);
+	libTitles.close();
+	std::cout <<  "Posting what is available to an adult.\n";
+	frank.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
+	std::cout <<  "That's a lot!!\n";
+	std::cout <<  "Adding a new patron to the library!\n";
+	frank.addPatron("Greg", DebugPatron::PatronType::ADULT);
+	frank.outputKnownPatronsTo(std::cout);
+	std::cout <<  "Making new empty library.\n";
+	std::ifstream smallerLibraryInput("TestBatchSave.txt");
+	DebugLibrary sally(DebugDate(), smallerLibraryInput);
+	smallerLibraryInput.close();
+	sally.addPatron("Smith", DebugPatron::PatronType::ADULT);
+	sally.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
+	std::cout <<  "Adding a couple books...\n";
+	sally.addItem("This is my life now.", DebugItem::ITEMTYPES::ADULTBOOK);
+	sally.addItem("This is my story", DebugItem::ITEMTYPES::DVD);
+	sally.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
+	std::cout <<  "Removing one of the books...\n";
+	sally.removeItem("This is my story");
+	sally.outputAvailableTo(std::cout, "Smith");
+	std::cout <<  "Checking out titles now.\n";
+	sally.checkoutTitle("This is my life now.", "Smith");
+	sally.checkoutTitle(" 1001 Arabian Nights", "Smith");
+	sally.outputCheckedOutTo(std::cout);
+	sally.outputAvailableTo(std::cout, "Smith");
+	std::cout <<  "\nReturning the title now.\n";
+	sally.checkinTitle("This is my life now.", "Smith");
+	sally.outputTo(std::cout);
+	std::cout <<  "Removing patron who still has books...\n";
+	sally.removePatron("Smith");
+	sally.outputAvailableTo(std::cout, DebugPatron::PatronType::ADULT);
+	std::cout <<  "Saving to file now...\n";
+	std::ofstream output("TestLibrarySave.txt");
+	sally.outputTo(output);
+	output.close();
+	std::cout <<  "Loading the saved file.\n";
+	std::ifstream testLoadFile("TestLibrarySave.txt");
+	DebugLibrary slappy(testLoadFile);
+	slappy.outputTo(std::cout);
+	std::cout <<  "Test complete!\n";
 
-	DebugItem mike("Fuck my pussy", 1);
-	DebugDate steve;
-	steve.attach(&mike);
-	steve.notify();
-	steve.detach(&mike);
-	steve.notify();
 	getchar();
 	return 0;
 }

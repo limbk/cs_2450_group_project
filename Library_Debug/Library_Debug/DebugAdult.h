@@ -10,5 +10,6 @@ public:
 	~DebugAdult();
 	PatronType getType() override
 	{ return ADULT; }
+	void printTo(std::ostream& out);
 };
 

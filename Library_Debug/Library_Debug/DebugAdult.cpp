@@ -16,3 +16,8 @@ DebugAdult::~DebugAdult()
 {
 }
 
+void DebugAdult::printTo(std::ostream& out)
+{
+	out << "Adult ";
+	DebugPatron::printTo(out);
+}

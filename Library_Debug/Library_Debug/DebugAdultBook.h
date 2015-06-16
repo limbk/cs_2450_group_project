@@ -9,5 +9,7 @@ public:
 	DebugAdultBook(std::istream& in);
 	~DebugAdultBook();
 	ITEMTYPES getType(){ return ADULTBOOK; }
+	void printAsAvailableTo(std::ostream& out);
+	void printStatusTo(std::ostream& out);
 };
 

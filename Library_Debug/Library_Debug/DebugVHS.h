@@ -9,5 +9,7 @@ public:
 	DebugVHS(std::istream& in);
 	~DebugVHS();
 	ITEMTYPES getType(){ return VHS; }
+	void printStatusTo(std::ostream& out);
+	void printAsAvailableTo(std::ostream& out);
 };
 

@@ -2,20 +2,20 @@
 #include "DebugLibrary.h"
 
 
-std::_Vector_iterator<std::_Vector_val<std::_Simple_types<DebugItem*>>> 
-DebugLibrary::findTitle(std::string title)
+DebugItem* DebugLibrary::retrieveTitle(std::string title)
 {
 	auto toReturn = std::find_if(availableItems.begin(), availableItems.end(),
 		[title](DebugItem* toCheck){return toCheck->hasTitle(title); });
-	return toReturn;
+	if (toReturn == availableItems.end()) return nullptr;
+	return (*toReturn);
 }
 
-std::_Vector_iterator<std::_Vector_val<std::_Simple_types<DebugPatron*>>> 
-DebugLibrary::findPatron(std::string who)
+DebugPatron* DebugLibrary::retrievePatron(std::string who)
 {
 	auto toReturn = std::find_if(knownPatrons.begin(), knownPatrons.end(),
 		[who](DebugPatron* toCheck){return toCheck->hasName(who); });
-	return toReturn;
+	if (toReturn == knownPatrons.end()) return nullptr;
+	else return (*toReturn);
 }
 
 DebugLibrary::DebugLibrary(DebugDate startDate, std::istream& inCatalog)
@@ -46,6 +46,9 @@ DebugLibrary::DebugLibrary(DebugDate startDate, std::istream& inCatalog)
 		}
 		catch (...)
 		{
+			//This is bad to do...not broken, but bad.
+			if (inCatalog.eof() != true)
+				std::cout << "Bad read during catalog!\n";
 			break;
 		}
 	}
@@ -104,7 +107,7 @@ DebugLibrary::~DebugLibrary()
 void DebugLibrary::addPatron(std::string name, DebugPatron::PatronType which)
 {
 	if (name.empty()) throw "Empty name!\n";
-	if (findPatron(name) != knownPatrons.end()) throw "Person by that name already exists!\n";
+	if (retrievePatron(name) != nullptr) throw "Person by that name already exists!\n";
 	switch (which)
 	{
 	case DebugPatron::PatronType::ADULT:
@@ -115,14 +118,16 @@ void DebugLibrary::addPatron(std::string name, DebugPatron::PatronType which)
 		break;
 	}
 }
-
 void DebugLibrary::removePatron(std::string who)
 {
-	auto toRemove = findPatron(who);
-	if (toRemove != knownPatrons.end())
+	DebugPatron* toRemove = retrievePatron(who);
+	if (toRemove != nullptr)
 	{
-		delete (*toRemove);
-		knownPatrons.erase(toRemove);
+		auto extractedBooks = toRemove->extractBooks();
+		for (auto item : extractedBooks)
+			availableItems.push_back(item);
+		delete toRemove;
+		knownPatrons.erase(std::remove(knownPatrons.begin(), knownPatrons.end(), toRemove), knownPatrons.end());
 	}
 }
 
@@ -149,11 +154,11 @@ void DebugLibrary::addItem(std::string title, DebugItem::ITEMTYPES which)
 
 void DebugLibrary::removeItem(std::string whichTitle)
 {
-	auto toRemove = findTitle(whichTitle);
-	if (toRemove != availableItems.end())
+	DebugItem* toRemove = retrieveTitle(whichTitle);
+	if (toRemove != nullptr)
 	{
-		delete (*toRemove);
-		availableItems.erase(toRemove);
+		delete toRemove;
+		availableItems.erase(std::remove(availableItems.begin(), availableItems.end(), toRemove), availableItems.end());
 	}
 }
 
@@ -169,59 +174,76 @@ void DebugLibrary::outputAvailableTo(std::ostream& out, DebugPatron::PatronType 
 	{
 	case DebugPatron::PatronType::ADULT:
 		for (auto x : availableItems)
-			x->outputTo(out);
+			x->printAsAvailableTo(out), out << "\n";
 		break;
 	case DebugPatron::PatronType::CHILD:
 		for (auto x : availableItems)
 			if (x->getType() == DebugItem::ITEMTYPES::CHILDRENSBOOK)
-				x->outputTo(out);
+				x->printAsAvailableTo(out), out << "\n";
 		break;
 	}
 }
 
 void DebugLibrary::outputAvailableTo(std::ostream& out, std::string who)
 {
-	auto toWhom = findPatron(who);
-	if (toWhom == knownPatrons.end()) throw "Unrecognized patron!\n";
-	outputAvailableTo(out, (*toWhom)->getType());
+	DebugPatron* toWhom = retrievePatron(who);
+	if (toWhom == nullptr) throw "Unrecognized patron!\n";
+	outputAvailableTo(out, toWhom->getType());
 }
-
 void DebugLibrary::outputKnownPatronsTo(std::ostream& out)
 {
 	for (auto x : knownPatrons)
-		x->outputTo(out);
+		x->printTo(out), out << "\n";
 }
 
 void DebugLibrary::checkoutTitle(std::string toCheckout, std::string who)
 {
-	auto toRemove = findTitle(toCheckout);
-	auto toRecieve = findPatron(who);
+	DebugItem* toRemove = retrieveTitle(toCheckout);
+	DebugPatron* toRecieve = retrievePatron(who);
 	//When moving to UI this is where I can catch and make a message dialog
-	if (toRemove == availableItems.end() || toRecieve == knownPatrons.end())
+	if (toRemove == nullptr || toRecieve == nullptr)
+	{
 		std::cout << "Cannot find title and/or patron!\n";
-	(*toRemove)->checkOut(currDate);
-	(*toRecieve)->checkOut((*toRemove));
-	availableItems.erase(toRemove);
+		return;
+	}
+	toRemove->checkOut(currDate);
+	try
+	{
+		toRecieve->checkOut(toRemove);
+		availableItems.erase(std::remove(availableItems.begin(), availableItems.end(), toRemove), availableItems.end());
+	}
+	catch (char* errMsg)
+	{
+		std::cout << errMsg;
+		toRemove->checkIn(currDate);
+	}
 }
 
 void DebugLibrary::checkinTitle(std::string toReturn, std::string who)
 {
-	auto theReturner = findPatron(who);
-	if (theReturner == knownPatrons.end())
+	DebugPatron* theReturner = retrievePatron(who);
+	//Note: I should just do a message dialog instead
+	if (theReturner == nullptr)
 		throw "Cannot find patron!\n";
 	try
 	{
-		auto returned = (*theReturner)->checkIn(toReturn);
+		DebugItem* returned = theReturner->checkIn(toReturn);
 		availableItems.push_back(returned);
 	}
 	catch (char* thrownMessage)
 	{
 		//catch the bad news here
+		//maybe handle this better? with the gui this shouldnt happen...
 		std::cout << thrownMessage;
 	}
 	
 }
-
+//Purpose: Outputs the conditions of the library to the output stream provided 
+//	 really only used for saving, but is useful as public for debugging purposes.
+//Pre-conditions: Out is not in a failed state. Out has been initialized to valid  
+//	 values.
+//Post-conditions: Library state is written out in a manner from which it can be 
+//	 read back in.
 void DebugLibrary::outputTo(std::ostream& out)
 {
 	currDate.outputTo(out);
@@ -238,7 +260,9 @@ void DebugLibrary::outputTo(std::ostream& out)
 		x->outputTo(out);
 	}
 }
-
+//Purpose: Library advances its current date as specified by numDays.
+//Pre-conditions: None
+//Post-conditions: Library date is altered by the number of days.
 void DebugLibrary::advanceDate(int numDays)
 {
 	currDate = currDate.advance(numDays);

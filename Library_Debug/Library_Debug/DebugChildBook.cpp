@@ -16,3 +16,14 @@ DebugChildBook::DebugChildBook(std::istream& in)
 DebugChildBook::~DebugChildBook()
 {
 }
+void DebugChildBook::printStatusTo(std::ostream& out)
+{
+	out << "Childrens Book";
+	DebugItem::printStatusTo(out);
+}
+
+void DebugChildBook::printAsAvailableTo(std::ostream& out)
+{
+	out << "Childrens Book ";
+	DebugItem::printAsAvailableTo(out);
+}

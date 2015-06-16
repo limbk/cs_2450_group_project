@@ -9,5 +9,6 @@ public:
 	DebugChild(std::istream& in);
 	~DebugChild();
 	PatronType getType(){ return CHILD; }
+	void printTo(std::ostream& out);
 };
 

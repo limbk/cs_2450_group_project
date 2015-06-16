@@ -18,10 +18,9 @@ class DebugLibrary
 	 *~~~~~~~~~~~~~~~~~~~~~~~HELPER METHODS~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 
-	std::_Vector_iterator<std::_Vector_val<std::_Simple_types<DebugItem*>>>
-		findTitle(std::string title);
-	std::_Vector_iterator<std::_Vector_val<std::_Simple_types<DebugPatron*>>>
-		findPatron(std::string who);
+	DebugItem* retrieveTitle(std::string title);
+	DebugPatron* retrievePatron(std::string who);
+
 public:
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~CLASS CONSTRUCTORS/DESTRUCTORS~~~~~~~~~~~~~~~~~

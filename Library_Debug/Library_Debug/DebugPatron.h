@@ -10,7 +10,7 @@ class DebugPatron
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~CLASS DATA~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 
-	std::list<DebugItem*> checkedOut{};
+	std::vector<DebugItem*> checkedOut{};
 	std::string name{};
 	int MaxCheckedOut{};
 
@@ -31,6 +31,7 @@ public:
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 	
 	void outputTo(std::ostream& out);
+	virtual void printTo(std::ostream& out);
 	void outputCheckedOutTo(std::ostream& out, Version which = ALL );
 	void outputOverdueTo(std::ostream& out, Version which = ALL);
 	void checkOut(DebugItem* toCheckout);
@@ -38,6 +39,7 @@ public:
 	DebugItem* checkIn(std::string identifier);
 	virtual PatronType getType() = 0;
 	bool hasName(std::string toCheck) { return toCheck == name; }
+	std::vector<DebugItem*> extractBooks();
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~CLASS OPERATIONS~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 

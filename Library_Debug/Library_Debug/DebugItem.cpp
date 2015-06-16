@@ -47,7 +47,8 @@ void DebugItem::printStatusTo(std::ostream& out)
 		std::cout << "Yes";
 	else std::cout << "No";
 }
-void DebugItem::printTitleTo(std::ostream& out)
+
+void DebugItem::printAsAvailableTo(std::ostream& out)
 {
 	out << title;
 }

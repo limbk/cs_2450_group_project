@@ -14,6 +14,7 @@ public:
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
 
 	DebugDate();
+	DebugDate(int year, int month, int day);
 	DebugDate(std::istream& in);
 	~DebugDate();
 

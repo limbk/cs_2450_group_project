@@ -16,3 +16,14 @@ DebugAdultBook::~DebugAdultBook()
 {
 	
 }
+void DebugAdultBook::printStatusTo(std::ostream& out)
+{
+	out << "Adult Book";
+	DebugItem::printStatusTo(out);
+}
+
+void DebugAdultBook::printAsAvailableTo(std::ostream& out)
+{
+	out << "Adult Book ";
+	DebugItem::printAsAvailableTo(out);
+}
