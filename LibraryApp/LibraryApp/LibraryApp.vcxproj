@@ -81,6 +81,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adult.h" />
+    <ClInclude Include="Child.h" />
+    <ClInclude Include="Patron.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
@@ -89,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Adult.cpp" />
+    <ClCompile Include="Child.cpp" />
+    <ClCompile Include="Patron.cpp" />
     <ClCompile Include="LibraryApp.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

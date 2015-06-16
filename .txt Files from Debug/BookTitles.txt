@@ -1,0 +1,700 @@
+1 1001 Arabian Nights
+	115 5 14 
+	115 5 20 
+6
+0
+2 The Witcher
+	115 5 14 
+	115 5 17 
+3
+0
+1 Lucky Jim by Kingsley Amis
+	115 5 19 
+	115 5 22 
+3
+0
+2 Money by Martin Amis
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Information by Martin Amis
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Bottle Factory Outing by Beryl Bainbridge
+	115 5 19 
+	115 5 22 
+3
+0
+1 According to Queeney by Beryl Bainbridge
+	115 5 19 
+	115 5 22 
+3
+0
+2 Flaubert's Parrot by Julian Barnes
+	115 5 19 
+	115 5 22 
+3
+0
+1 A History of the World in 10 1/2 Chapters by Julian Barnes
+	115 5 19 
+	115 5 22 
+3
+0
+2 Augustus Carp, Esq. by Himself: Being the Autobiography of a Really Good Man by Henry Howarth Bashford
+	115 5 19 
+	115 5 22 
+3
+0
+1 Molloy by Samuel Beckett
+	115 5 19 
+	115 5 22 
+3
+0
+2 Zuleika Dobson by Max Beerbohm
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Adventures of Augie March by Saul Bellow
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Uncommon Reader by Alan Bennett
+	115 5 19 
+	115 5 22 
+3
+0
+1 Queen Lucia by EF Benson
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Ascent of Rum Doodle by WE Bowman
+	115 5 19 
+	115 5 22 
+3
+0
+1 A Good Man in Africa by William Boyd
+	115 5 19 
+	115 5 22 
+3
+0
+2 The History Man by Malcolm Bradbury
+	115 5 19 
+	115 5 22 
+3
+0
+1 No Bed for Bacon by Caryl Brahms and SJ Simon
+	115 5 19 
+	115 5 22 
+3
+0
+2 Illywhacker by Peter Carey
+	115 5 19 
+	115 5 22 
+3
+0
+1 A Season in Sinji by JL Carr
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Harpole Report by JL Carr
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Hearing Trumpet by Leonora Carrington
+	115 5 19 
+	115 5 22 
+3
+0
+2 Mister Johnson by Joyce Cary
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Horse's Mouth by Joyce Cary
+	115 5 19 
+	115 5 22 
+3
+0
+2 Don Quixote by Miguel de Cervantes
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Case of the Gilded Fly by Edmund Crispin
+	115 5 19 
+	115 5 22 
+3
+0
+2 Just William by Richmal Crompton
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Provincial Lady by EM Delafield
+	115 5 19 
+	115 5 22 
+3
+0
+2 Slouching Towards Kalamazoo by Peter De Vries
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Pickwick Papers by Charles Dickens
+	115 5 19 
+	115 5 22 
+3
+0
+2 Martin Chuzzlewit by Charles Dickens
+	115 5 19 
+	115 5 22 
+3
+0
+1 Jacques the Fatalist and his Master by Denis Diderot
+	115 5 19 
+	115 5 22 
+3
+0
+2 A Fairy Tale of New York by JP Donleavy
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Commitments by Roddy Doyle
+	115 5 19 
+	115 5 22 
+3
+0
+2 Ennui by Maria Edgeworth
+	115 5 19 
+	115 5 22 
+3
+0
+1 Cheese by Willem Elsschot
+	115 5 19 
+	115 5 22 
+3
+0
+2 Bridget Jones's Diary by Helen Fielding
+	115 5 19 
+	115 5 22 
+3
+0
+1 Joseph Andrews by Henry Fielding
+	115 5 19 
+	115 5 22 
+3
+0
+2 Tom Jones by Henry Fielding
+	115 5 19 
+	115 5 22 
+3
+0
+1 Caprice by Ronald Firbank
+	115 5 19 
+	115 5 22 
+3
+0
+2 Bouvard et Pécuchet by Gustave Flaubert
+	115 5 19 
+	115 5 22 
+3
+0
+1 Towards the End of the Morning by Michael Frayn
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Polygots by William Gerhardie
+	115 5 19 
+	115 5 22 
+3
+0
+1 Cold Comfort Farm by Stella Gibbons
+	115 5 19 
+	115 5 22 
+3
+0
+2 Dead Souls by Nikolai Gogol
+	115 5 19 
+	115 5 22 
+3
+0
+1 Oblomov by Ivan Goncharov
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Wind in the Willows by Kenneth Grahame
+	115 5 19 
+	115 5 22 
+3
+0
+1 Brewster's Millions by Richard Greaves (George Barr McCutcheon)
+	115 5 19 
+	115 5 22 
+3
+0
+2 Squire Haggard's Journal by Michael Green
+	115 5 19 
+	115 5 22 
+3
+0
+1 Or Man in Havana by Graham Greene
+	115 5 19 
+	115 5 22 
+3
+0
+2 Travels with My Aunt by Graham Greene
+	115 5 19 
+	115 5 22 
+3
+0
+1 Diary of a Nobody by George Grossmith
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Little World of Don Camillo by Giovanni Guareschi
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Curious Incident of the Dog in the Night-time by Mark Haddon
+	115 5 19 
+	115 5 22 
+3
+0
+2 Catch-22 by Joseph Heller
+	115 5 19 
+	115 5 22 
+3
+0
+1 Mr Blandings Builds His Dream House by Eric Hodgkins
+	115 5 19 
+	115 5 22 
+3
+0
+2 High Fidelity by Nick Hornby
+	115 5 19 
+	115 5 22 
+3
+0
+1 I Served the King of England by Bohumil Hrabal
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Lecturer's Tale by James Hynes
+	115 5 19 
+	115 5 22 
+3
+0
+1 Mr Norris Changes Trains by Christopher Isherwood
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Mighty Walzer Howard by Jacobson
+	115 5 19 
+	115 5 22 
+3
+0
+1 Pictures from an Institution by Randall Jarrell
+	115 5 19 
+	115 5 22 
+3
+0
+2 Three Men in a Boat by Jerome K Jerome
+	115 5 19 
+	115 5 22 
+3
+0
+1 Finnegans Wake by James Joyce
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Castle by Franz Kafka
+	115 5 19 
+	115 5 22 
+3
+0
+1 Lake Wobegon Days by Garrison Keillor
+	115 5 19 
+	115 5 22 
+3
+0
+2 Death and the Penguin by Andrey Kurkov
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Debt to Pleasure by John Lanchester
+	115 5 19 
+	115 5 22 
+3
+0
+2 L'Histoire de Gil Blas de Santillane (Gil Blas) Alain-René Lesage
+	115 5 19 
+	115 5 22 
+3
+0
+1 Changing Places by David Lodge
+	115 5 19 
+	115 5 22 
+3
+0
+2 Nice Work by David Lodge
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Towers of Trebizond by Rose Macaulay
+	115 5 19 
+	115 5 22 
+3
+0
+2 England, Their England by AG Macdonell
+	115 5 19 
+	115 5 22 
+3
+0
+1 Whisky Galore by Compton Mackenzie
+	115 5 19 
+	115 5 22 
+3
+0
+2 Memoirs of a Gnostic Dwarf by David Madsen
+	115 5 19 
+	115 5 22 
+3
+0
+1 Cakes and Ale - Or, the Skeleton in the Cupboard by W Somerset Maugham
+	115 5 19 
+	115 5 22 
+3
+0
+2 Tales of the City by Armistead Maupin
+	115 5 19 
+	115 5 22 
+3
+0
+1 Bright Lights, Big City by Jay McInerney
+	115 5 19 
+	115 5 22 
+3
+0
+2 Puckoon by Spike Milligan
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Restraint of Beasts by Magnus Mills
+	115 5 19 
+	115 5 22 
+3
+0
+2 Charade by John Mortimer
+	115 5 19 
+	115 5 22 
+3
+0
+1 Titmuss Regained by John Mortimer
+	115 5 19 
+	115 5 22 
+3
+0
+2 Under the Net by Iris Murdoch
+	115 5 19 
+	115 5 22 
+3
+0
+1 Pnin by Vladimir Nabokov
+	115 5 19 
+	115 5 22 
+3
+0
+2 Pale Fire by Vladimir Nabokov
+	115 5 19 
+	115 5 22 
+3
+0
+1 Fireflies by Shiva Naipaul
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Sacred Book of the Werewolf by Victor Pelevin
+	115 5 19 
+	115 5 22 
+3
+0
+1 La Disparition by Georges Perec
+	115 5 19 
+	115 5 22 
+3
+0
+2 Les Revenentes by Georges Perec
+	115 5 19 
+	115 5 22 
+3
+0
+1 La Vie Mode d'Emploi by Georges Perec
+	115 5 19 
+	115 5 22 
+3
+0
+2 My Search for Warren Harding by Robert Plunkett
+	115 5 19 
+	115 5 22 
+3
+0
+1 A Dance to the Music of Time by Anthony Powell
+	115 5 19 
+	115 5 22 
+3
+0
+2 A Time to be Born by Dawn Powell
+	115 5 19 
+	115 5 22 
+3
+0
+1 Excellent Women by Barbara Pym
+	115 5 19 
+	115 5 22 
+3
+0
+2 Less Than Angels by Barbara Pym
+	115 5 19 
+	115 5 22 
+3
+0
+1 Zazie in the Metro by Raymond Queneau
+	115 5 19 
+	115 5 22 
+3
+0
+2 Solomon Gursky Was Here by Mordecai Richler
+	115 5 19 
+	115 5 22 
+3
+0
+1 Alms for Oblivion by Simon Raven
+	115 5 19 
+	115 5 22 
+3
+0
+2 Portnoy's Complaint by Philip Roth
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Westminster Alice by Saki
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Unbearable Bassington by Saki 
+	115 5 19 
+	115 5 22 
+3
+0
+1 Hurrah for St Trinian's by Ronald Searle
+	115 5 19 
+	115 5 22 
+3
+0
+2 Great Apes by Will Self
+	115 5 19 
+	115 5 22 
+3
+0
+1 Porterhouse Blue by Tom Sharpe
+	115 5 19 
+	115 5 22 
+3
+0
+2 Blott on the Landscape by Tom Sharpe
+	115 5 19 
+	115 5 22 
+3
+0
+1 Office Politics by Wilfrid Sheed
+	115 5 19 
+	115 5 22 
+3
+0
+2 Belles Lettres Papers: A Novel by Charles Simmons
+	115 5 19 
+	115 5 22 
+3
+0
+1 Moo by Jane Smiley
+	115 5 19 
+	115 5 22 
+3
+0
+2 Topper Takes a Trip by Thorne Smith
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Adventures of Ferdinand Count Fathom by Tobias Smollett
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Adventures of Roderick Random by Tobias Smollett
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Adventures of Peregrine Pickle by Tobias Smollett
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Expedition of Humphry Clinker by Tobias Smollett
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Prime of Miss Jean Brodie by Muriel Spark
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Girls of Slender Means by Muriel Spark
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Driver's Seat by Muriel Spark
+	115 5 19 
+	115 5 22 
+3
+0
+2 Loitering with Intent by Muriel Spark
+	115 5 19 
+	115 5 22 
+3
+0
+1 A Far Cry from Kensington by Muriel Spark
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Life and Opinions of Tristram Shandy, Gentleman by Laurence Sterne
+	115 5 19 
+	115 5 22 
+3
+0
+1 White Man Falling by Mike Stocks
+	115 5 19 
+	115 5 22 
+3
+0
+2 Handley Cross by RS Surtees
+	115 5 19 
+	115 5 22 
+3
+0
+1 A Tale of a Tub by Jonathan Swift
+	115 5 19 
+	115 5 22 
+3
+0
+2 Penrod by Booth Tarkington
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Luck of Barry Lyndon by William Makepeace Thackeray
+	115 5 19 
+	115 5 22 
+3
+0
+2 Before Lunch by Angela Thirkell
+	115 5 19 
+	115 5 22 
+3
+0
+1 Tropic of Ruislip by Leslie Thomas
+	115 5 19 
+	115 5 22 
+3
+0
+2 A Confederacy of Dunces by John Kennedy Toole
+	115 5 19 
+	115 5 22 
+3
+0
+1 Barchester Towers by Anthony Trollope
+	115 5 19 
+	115 5 22 
+3
+0
+2 Venus on the Half-Shell by Kilgore Trout
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Mysterious Stranger by Mark Twain
+	115 5 19 
+	115 5 22 
+3
+0
+2 The Witches of Eastwick by John Updike
+	115 5 19 
+	115 5 22 
+3
+0
+1 Breakfast of Champions by Kurt Vonnegut
+	115 5 19 
+	115 5 22 
+3
+0
+2 Infinite Jest by David Foster Wallace
+	115 5 19 
+	115 5 22 
+3
+0
+1 Decline and Fall by Evelyn Waugh
+	115 5 19 
+	115 5 22 
+3
+0
+2 Vile Bodies by Evelyn Waugh
+	115 5 19 
+	115 5 22 
+3
+0
+1 Black Mischief by Evelyn Waugh
+	115 5 19 
+	115 5 22 
+3
+0
+2 Scoop by Evelyn Waugh
+	115 5 19 
+	115 5 22 
+3
+0
+1 The Loved One by Evelyn Waugh
+	115 5 19 
+	115 5 22 
+3
+0
+2 A Handful of Dust by Evelyn Waugh 
+	115 5 19 
+	115 5 22 
+3
+0
