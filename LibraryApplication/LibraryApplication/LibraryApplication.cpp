@@ -7,101 +7,18 @@
 #include "Child.h"
 #include "Date.h"
 
-//Patron* createPatron(std::vector<Patron*> currPatrons)
-//{
-//	Patron* toReturn = nullptr;
-//	char response = 'Y';
-//	while (response == 'Y')
-//	{
-//		std::cout << "Please enter a name for the new patron: ";
-//		std::string newName;
-//		std::getline(std::cin, newName);
-//		if (std::find_if(currPatrons.begin(), currPatrons.end(),
-//			[newName](Patron* toCheck)
-//		{ return toCheck->hasName(newName); }) != currPatrons.end())
-//		{
-//			std::cout << "Sorry but that name is already taken.\nWould you like to try a different name?\nY/N: ";
-//			std::cin >> response;
-//			toupper(response);
-//		}
-//		else
-//		{
-//
-//		}
-//
-//	}
-//}
+typedef void (*commandFunc)(void);
 
-void mainLoop(const std::vector<std::string> MENUOPTIONS)
+void doNothing()
 {
-	bool done = false;
-	int choice;
-	std::vector<Patron*> patrons{};
-	while (!done) {
-		std::cout << "Please select an action number from the following menu: \n";
-		for (int i = 0; i < MENUOPTIONS.size(); i++)
-			std::cout << i + 1 << ") " << MENUOPTIONS[i] << "\n";
-		std::cout << MENUOPTIONS.size() + 1 << ") Quit\n\n";
-		std::cout << "Selection: ";
-
-		//Gather information from the user
-		std::cin.clear();
-		std::cin >> choice;
-		switch (choice){
-		case 1:
-			//checkout a book
-			std::cout << "Checking out a book...\n";
-			break;
-		case 2:
-			//checkin a book
-			std::cout << "Checking in a book...\n";
-			break;
-		case 3:
-			//list all books
-			std::cout << "Listing all books...\n";
-			break;
-		case 4:
-			//list overdue books
-			std::cout << "Listing overdue books...\n";
-			break;
-		case 5:
-			//list a patron's books
-			std::cout << "Listing patrons books...\n";
-			break;
-		case 6:
-			//advance the date
-			std::cout << "Advancing the date...\n";
-			break;
-		case 7:
-			//Add patron
-
-			break;
-		case 8:
-			//remove patron
-			break;
-		case 9:
-			//Quit
-			done = true;
-			break;
-		default:
-			std::cout << "ERROR: Invalid input.\n";
-			std::cin.clear();
-			std::string toIgnore{};
-			std::getline(std::cin, toIgnore);
-			break;
-		}
-
-	}
 }
+
+void mainLoop(const std::vector<std::string> MENUOPTIONS, std::vector<commandFunc> MENUFUNCTIONS);
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	//Load Library Object
-
-
 	//Print Welcome to the screen
-	std::cout << "Welcome to the Library\n\n";
-	//Print Menu items
+	std::cout << "Welcome to the Library!\n\n";
 	const std::vector<std::string> MENUOPTIONS
 	{
 		"Check out a book",
@@ -113,7 +30,53 @@ int _tmain(int argc, _TCHAR* argv[])
 		"Add a new patron.",
 		"Remove a patron."
 	};
-	mainLoop(MENUOPTIONS);
+	//commandFunc is function pointer taking void and returning void
+	//we should change later to take the library as an argument.
+	const std::vector<commandFunc> MENUFUNCTIONS{
+		doNothing, //Check out a book
+		doNothing, //Check in a book
+		doNothing, //List all books
+		doNothing, //List overdue books
+		doNothing, //List patron books
+		doNothing, //Advance the date
+		doNothing, //Add patron
+		doNothing  //Remove patron
+	};
+	mainLoop(MENUOPTIONS, MENUFUNCTIONS);
+	std::cout <<  "Thanks for using the library!\n";
 	return 0;
 }
 
+void mainLoop(const std::vector<std::string> MENUOPTIONS, std::vector<commandFunc> MENUFUNCTIONS)
+{
+	bool done = false;
+	int choice;
+	std::vector<Patron*> patrons{};
+	while (!done) {
+		std::cout << "Please select an action number from the following menu: \n";
+		for (int i = 0; i < MENUOPTIONS.size(); i++)
+			std::cout << i + 1 << ") " << MENUOPTIONS[i] << "\n";
+		std::cout << MENUOPTIONS.size() + 1 << ") Quit\n\n";
+		std::cout << "Selection: ";
+		//Gather information from the user
+		std::cin.clear();
+		std::cin >> choice;
+		if (!std::cin)
+		{
+			std::cout << "ERROR: Invalid input.\n";
+			std::cin.clear();
+			std::string toIgnore{};
+			std::getline(std::cin, toIgnore);
+			continue;
+		}
+		//Decrementing to actually go to correct index
+		--choice;
+		if (choice == MENUOPTIONS.size())
+		{
+			done = true;
+			continue;
+		}
+		std::cout << "Selected option to: " << MENUOPTIONS[choice] << "\n";
+		MENUFUNCTIONS[choice];
+	}
+}
