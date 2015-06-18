@@ -5,31 +5,32 @@
 #include "Patron.h"
 #include "Adult.h"
 #include "Child.h"
+#include "Date.h"
 
-Patron* createPatron(std::vector<Patron*> currPatrons)
-{
-	Patron* toReturn = nullptr;
-	char response = 'Y';
-	while (response == 'Y')
-	{
-		std::cout << "Please enter a name for the new patron: ";
-		std::string newName;
-		std::getline(std::cin, newName);
-		if (std::find_if(currPatrons.begin(), currPatrons.end(),
-			[newName](Patron* toCheck)
-		{ return toCheck->hasName(newName); }) != currPatrons.end())
-		{
-			std::cout << "Sorry but that name is already taken.\nWould you like to try a different name?\nY/N: ";
-			std::cin >> response;
-			toupper(response);
-		}
-		else
-		{
-
-		}
-
-	}
-}
+//Patron* createPatron(std::vector<Patron*> currPatrons)
+//{
+//	Patron* toReturn = nullptr;
+//	char response = 'Y';
+//	while (response == 'Y')
+//	{
+//		std::cout << "Please enter a name for the new patron: ";
+//		std::string newName;
+//		std::getline(std::cin, newName);
+//		if (std::find_if(currPatrons.begin(), currPatrons.end(),
+//			[newName](Patron* toCheck)
+//		{ return toCheck->hasName(newName); }) != currPatrons.end())
+//		{
+//			std::cout << "Sorry but that name is already taken.\nWould you like to try a different name?\nY/N: ";
+//			std::cin >> response;
+//			toupper(response);
+//		}
+//		else
+//		{
+//
+//		}
+//
+//	}
+//}
 
 void mainLoop(const std::vector<std::string> MENUOPTIONS)
 {
@@ -113,7 +114,6 @@ int _tmain(int argc, _TCHAR* argv[])
 		"Remove a patron."
 	};
 	mainLoop(MENUOPTIONS);
-
 	return 0;
 }
 
