@@ -136,9 +136,3 @@ void Patron::outputOverdueTo(std::ostream& out, Version which)
 //	return (toReturn);
 //}
 
-//std::vector<Item*> Patron::extractBooks()
-//{
-//	std::vector<Item*> toReturn = checkedOut;
-//	checkedOut.clear();
-//	return toReturn;
-//}

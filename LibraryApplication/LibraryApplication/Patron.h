@@ -39,7 +39,6 @@ public:
 	//Item* checkIn(std::string identifier);
 	virtual PatronType getType() = 0;
 	bool hasName(std::string toCheck) { return toCheck == name; }
-	//std::vector<Item*> extractBooks();
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~CLASS OPERATIONS~~~~~~~~~~~~~~~~~~~~~~~~
 	 *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ 
